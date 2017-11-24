@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 body,
 html,
@@ -11,8 +11,8 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.font-500 {
-  font-weight: 500;
+.margin-top-0 {
+  margin-top: 0 !important;
 }
 
 .margin-bottom-0 {
@@ -21,6 +21,18 @@ body {
 
 .margin-right-20 {
   margin-right: 20px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.brand-gold {
+  color: #ffca0a
+}
+
+.gray-lighter {
+  color: #e6e6e6;
 }
 
 /* Header
@@ -37,8 +49,14 @@ body {
   padding-top: 10px;
 }
 
-.navbar h2 {
+.navbar-brand>img {
+  max-height: 92px;
+  width: auto;
+}
+
+h2.header-title {
   margin-top: 5px;
+  font-weight: 500;
 }
 
 ul.navbar-nav {
@@ -76,8 +94,8 @@ li.head-form .left-inner-addon span {
 
 #sidebar {
   width: inherit;
-  min-width: 220px;
-  max-width: 220px;
+  min-width: 230px;
+  max-width: 230px;
   float: left;
   height: 100%;
   position: relative;
@@ -85,13 +103,26 @@ li.head-form .left-inner-addon span {
   overflow-x: hidden;
 }
 
-.input-group .form-control {
+#sidebar .col-md-12 {
+  padding-left: 0;
+}
+
+.sidebar-offcanvas h4 {
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.sidebar-offcanvas .form-group {
+  max-width: 180px;
+}
+
+.sidebar-offcanvas .input-group .form-control {
   height: 30px;
 }
 
 .radio,
 .checkbox {
-  padding-left: 0;
+  /*padding-left: 0;*/
 }
 
 /******* radio and checkbox style *********/
@@ -214,9 +245,41 @@ input[type="radio"] .styled:checked + label::before {
   margin-top: 7px;
 }
 
+/* Main content
+--------------------------------------------------
+*/
+
 #main {
   height:100%;
   overflow:auto;
+}
+
+#main .col-md-12 {
+  padding-right: 0;
+}
+
+h4.tour-name {
+  max-height: 40px !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 5px;
+}
+
+h4.tour-price {
+  margin: 0;
+  font-weight: 300;
+  color: #636363;
+}
+
+p.tour-overview {
+  margin: 5px 0 20px 0;
+}
+
+p.tour-overview a {
+  color: #3c9fbf;
 }
 
 /* off Canvas sidebar
@@ -233,7 +296,7 @@ input[type="radio"] .styled:checked + label::before {
   }
 
   #main {
-    margin-left: 220px;
+    margin-left: 230px;
   }
 }
 
