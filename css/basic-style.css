@@ -42,7 +42,7 @@ body {
 .navbar {
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .navbar-brand {
@@ -50,8 +50,12 @@ body {
 }
 
 .navbar-brand>img {
-  max-height: 92px;
-  width: auto;
+  max-width: 230px;
+  height: auto;
+}
+
+.navbar-collapse {
+  margin-left: 250px !important;
 }
 
 h2.header-title {
@@ -70,6 +74,7 @@ ul.navbar-nav {
 ul.navbar-nav .control-label {
   font-size: 17px;
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 li.head-form .left-inner-addon {
@@ -80,6 +85,7 @@ li.head-form .left-inner-addon {
 li.head-form .left-inner-addon .form-control {
     padding: 5px 10px 4px 30px;
     border-radius: 14px;
+    height: 34px;
 }
 
 li.head-form .left-inner-addon span {
@@ -120,12 +126,12 @@ li.head-form .left-inner-addon span {
   height: 30px;
 }
 
-.radio,
-.checkbox {
-  /*padding-left: 0;*/
-}
-
 /******* radio and checkbox style *********/
+
+.checkbox+.checkbox,
+.radio+.radio{
+  margin-top: 10px;
+}
 
 .radio {
   padding-left: 20px;
@@ -230,7 +236,7 @@ input[type="radio"] .styled:checked + label::before {
   padding-left: 3px;
   padding-top: 1px;
   font-size: 11px;
-  color: #555555;
+  color: #3c9fbf;
   line-height: 1.4;
 }
 .checkbox input[type="checkbox"]:indeterminate + label::after,
@@ -239,7 +245,7 @@ input[type="radio"] .styled:checked + label::before {
   content: "\f00c";
   width: 10px;
   height: 3px;
-  background-color: #555555;
+  background-color: #3c9fbf;
   border-radius: 2px;
   margin-left: -16.5px;
   margin-top: 7px;
@@ -251,11 +257,12 @@ input[type="radio"] .styled:checked + label::before {
 
 #main {
   height:100%;
-  overflow:auto;
+  /*overflow:auto;*/
 }
 
 #main .col-md-12 {
   padding-right: 0;
+  padding-bottom: 30px;
 }
 
 h4.tour-name {
@@ -282,21 +289,23 @@ p.tour-overview a {
   color: #3c9fbf;
 }
 
-/* off Canvas sidebar
+/* Responsive CSS + off Canvas sidebar
 --------------------------------------------------
 */
 
-@media screen and (min-width: 768px) {
-  .navbar-collapse {
-    margin-left: 250px !important;
+@media (min-width: 768px) {
+  .navbar-fixed-top .container {
+    width: 750px;
   }
-
-  #sidebar {
-    position: fixed;
+}
+@media (min-width: 992px) {
+  .navbar-fixed-top .container {
+    width: 970px;
   }
-
-  #main {
-    margin-left: 230px;
+}
+@media (min-width: 1200px) {
+  .navbar-fixed-top .container {
+    width: 1170px;
   }
 }
 
@@ -320,5 +329,41 @@ p.tour-overview a {
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  #sidebar {
+    position: fixed;
+  }
+
+  #main {
+    margin-left: 190px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar > .container .navbar-brand {
+    margin-left: 0;
+  }
+
+  .navbar-brand>img {
+    max-width: 190px;
+    height: auto;
+  }
+
+  .navbar-collapse {
+    margin-left: 220px !important;
+  }
+
+  .navbar-collapse li.head-form {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #main {
+    margin-left: 230px;
   }
 }
