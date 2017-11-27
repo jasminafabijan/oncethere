@@ -7,7 +7,7 @@ html,
 }
 
 body {
-  padding-top: 140px;
+  padding-top: 135px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 .navbar-collapse {
-  margin-left: 250px !important;
+  margin-left: 245px !important;
 }
 
 h2.header-title {
@@ -103,10 +103,13 @@ li.head-form .left-inner-addon span {
   min-width: 230px;
   max-width: 230px;
   float: left;
-  height: 100%;
-  position: relative;
+  /*height: 100%;*/
+  /*position: relative;*/
   overflow-y: auto;
   overflow-x: hidden;
+  position: fixed;
+  top: 130px;
+  bottom: 20px;
 }
 
 #sidebar .col-md-12 {
@@ -114,7 +117,7 @@ li.head-form .left-inner-addon span {
 }
 
 .sidebar-offcanvas h4 {
-  margin-top: 30px;
+  margin: 30px 0 15px 0;
   font-weight: 500;
 }
 
@@ -359,6 +362,11 @@ p.tour-overview a {
 
   .navbar-collapse li.head-form {
     width: 45%;
+  }
+
+  #sidebar {
+    min-width: 190px;
+    max-width: 190px;
   }
 }
 
