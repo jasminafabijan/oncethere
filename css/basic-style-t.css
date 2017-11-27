@@ -94,25 +94,22 @@ li.head-form .left-inner-addon span {
     pointer-events: none;
 }
 
-.row-offcanvas {
-  margin: 0 auto;
-  padding: 0px 15px;
-}
-
 /* Sidebar
 --------------------------------------------------
 */
 
 #sidebar {
   width: inherit;
-  min-width: 220px;
-  max-width: 220px;
+  min-width: 230px;
+  max-width: 230px;
   float: left;
-  height:100%;
-  position:relative;
-  overflow-y:auto;
-  overflow-x:hidden;
-  padding-bottom: 20px;
+  /*height: 100%;*/
+  /*position: relative;*/
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 130px;
+  bottom: 20px;
 }
 
 #sidebar .col-md-12 {
@@ -264,47 +261,12 @@ input[type="radio"] .styled:checked + label::before {
 #main {
   height:100%;
   /*overflow:auto;*/
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 #main .col-md-12 {
   padding-right: 0;
   padding-bottom: 30px;
 }
-
-.tour-image {
-  height: 156px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/******** START - Delete after back-end development *******/
-.tour-1 {
-  background-image: url(../img/tour-1.jpg);
-}
-
-.tour-2 {
-  background-image: url(../img/tour-2.jpg);
-}
-
-.tour-3 {
-  background-image: url(../img/tour-3.jpg);
-}
-
-.tour-4 {
-  background-image: url(../img/tour-4.jpg);
-}
-
-.tour-5 {
-  background-image: url(../img/tour-5.jpg);
-}
-
-.tour-6 {
-  background-image: url(../img/tour-6.jpg);
-}
-/******** END - Delete after back-end development *******/
 
 h4.tour-name {
   max-height: 40px !important;
@@ -338,26 +300,14 @@ p.tour-overview a {
   .navbar-fixed-top .container {
     width: 750px;
   }
-
-  .row-offcanvas {
-    width: 750px;
-  }
 }
 @media (min-width: 992px) {
   .navbar-fixed-top .container {
     width: 970px;
   }
-
-  .row-offcanvas {
-    width: 970px;
-  }
 }
 @media (min-width: 1200px) {
   .navbar-fixed-top .container {
-    width: 1170px;
-  }
-
-  .row-offcanvas {
     width: 1170px;
   }
 }
@@ -371,8 +321,7 @@ p.tour-overview a {
     width:calc(100% + 220px);
   }
 
-  .row-offcanvas-left
-  {
+  .row-offcanvas-left {
     left: -220px;
   }
 
@@ -388,13 +337,13 @@ p.tour-overview a {
 
 @media screen and (min-width: 768px) {
 
-  /*#sidebar {
+  #sidebar {
     position: fixed;
   }
 
   #main {
     margin-left: 190px;
-  }*/
+  }
 }
 
 @media screen and (max-width: 991px) {
