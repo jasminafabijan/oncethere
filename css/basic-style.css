@@ -11,6 +11,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.font-300 {
+  font-weight: 300;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
 .margin-top-0 {
   margin-top: 0 !important;
 }
@@ -36,11 +44,21 @@ body {
 }
 
 .btn-primary {
+  background-color: #dd6a45;
+  border-color: #d9592f;
+}
+
+.btn-primary:hover {
+  background-color: #ca4d25;
+  border-color: #ac421f;
+}
+
+.btn-info {
   background-color: #3c9fbf;
   border-color: #368fac;
 }
 
-.btn-primary:hover {
+.btn-info:hover {
   background-color: #307f98;
   border-color: #27687d;
 }
@@ -111,6 +129,13 @@ li.head-form .left-inner-addon span {
     pointer-events: none;
 }
 
+.navbar .btn-default.edit-option {
+  position: absolute;
+  top: 60px;
+  margin-left: -50px;
+  border: none;
+}
+
 /* Navbar toggle
 --------------------------------------------------
 */
@@ -118,7 +143,8 @@ li.head-form .left-inner-addon span {
   border-color: #3c9fbf;
 }
 
-.navbar-inverse .navbar-toggle:hover {
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:active {
   border-color: #307f98;
   background-color: #fff;
 }
@@ -264,6 +290,7 @@ input[type="radio"] .styled:checked + label::before {
   width: 17px;
   height: 17px;
   left: 0;
+  top: 1px;
   margin-left: -20px;
   border: 1px solid #cccccc;
   border-radius: 3px;
@@ -278,7 +305,7 @@ input[type="radio"] .styled:checked + label::before {
   width: 16px;
   height: 16px;
   left: 0;
-  top: 0;
+  top: 1px;
   margin-left: -20px;
   padding-left: 3px;
   padding-top: 1px;
@@ -345,6 +372,10 @@ input[type="radio"] .styled:checked + label::before {
 }
 /******** END - Delete after back-end development *******/
 
+div.tour-info .rating {
+  margin: -22px 0 0 5px;
+}
+
 h4.tour-name {
   max-height: 40px !important;
   text-overflow: ellipsis;
@@ -356,9 +387,11 @@ h4.tour-name {
 }
 
 h4.tour-price {
-  margin: 0;
+  margin: -31px 2px 0 0;
   font-weight: 300;
   color: #dd6a45;
+  background-color: #fff;
+  padding: 5px;
 }
 
 p.tour-overview {
@@ -367,6 +400,89 @@ p.tour-overview {
 
 p.tour-overview a {
   color: #3c9fbf;
+}
+
+.tour-info .pull-right {
+  margin-top: -32px;
+}
+
+.tag {
+  background-color: #3c9fbf;
+  text-align: left;
+  height: 25px;
+  line-height: 25px;
+  border-top-right-radius: 0.15em;
+  border-bottom-right-radius: 0.15em;
+  display: inline-block;
+  position: relative;
+  margin-left: 1.25em;
+  margin-right: .25em;
+  margin-bottom: .5em;
+}
+.tag::before {
+  border-right-color: #3c9fbf;
+}
+
+.tag::before, .tag::after {
+  content: "";
+  position: absolute;
+}
+.tag::before {
+  width: 1.875em;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
+  border-right-style: solid;
+  border-right-width: 13px;
+  top: 0;
+  left: -1.875em;
+}
+.tag::after {
+  background-color: #fff;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  top: 50%;
+  left: -0.41667em;
+  margin-top: -0.3em;
+}
+
+.tag-label {
+  font-weight: 500;
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.price-tag {
+  height: 30px;
+  position: absolute;
+  right: 18px;
+  text-align: right;
+  margin-top: -34px;
+}
+
+.tag-icon {
+  float: left;
+  width: 27px;
+  height: 30px;
+}
+
+.price-tag svg * {
+  fill: #3c9fbf;
+}
+
+.price-content {
+  background-color: #3c9fbf;
+  color: #fff;
+  padding: 4px 8px;
+  margin: 0 0 0 25px;
+  height: 30px;
+  text-align: right;
+  border-radius: 0 3px 3px 0;
+}
+
+.price-content span.font-300 {
+  font-size: 12px;
 }
 
 /* Responsive CSS + off Canvas sidebar
